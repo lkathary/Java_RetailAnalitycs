@@ -7,5 +7,5 @@ TRUNCATE TABLE transactions RESTART IDENTITY CASCADE;
 TRUNCATE TABLE checks RESTART IDENTITY CASCADE;
 
 DELETE FROM databasechangelog WHERE filename LIKE '%/v-2.0-import/%';
-DROP TABLE databasechangelog;
+
 CALL set_margin_type('default');
