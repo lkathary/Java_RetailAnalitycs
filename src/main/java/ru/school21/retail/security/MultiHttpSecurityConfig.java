@@ -27,7 +27,7 @@ public class MultiHttpSecurityConfig {
         manager.createUser(users.username("lkathary").password("222").roles("ADMIN").build());
         manager.createUser(users.username("cnathali").password("222").roles("ADMIN").build());
         manager.createUser(users.username("zgeorgan").password("222").roles("ADMIN").build());
-        manager.createUser(users.username("user").password("111").roles("USER").build());
+        manager.createUser(users.username("user").password("123").roles("USER").build());
         manager.createUser(users.username("mzoraida").password("333").roles("USER").build());
         manager.createUser(users.username("bernarda").password("333").roles("USER").build());
         return manager;
