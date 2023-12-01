@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: java_app
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
+    environment:
+      - DB_URL=jdbc:postgresql://db:5432/retail_analytics?escapeSyntaxCallMode=callIfNoReturn
+      - DB_USER=lordik
+      - DB_PASSWORD=lordik
+
+    depends_on:
+      - db
+  db:
+    image: 'postgres'
+    container_name: db
+    expose:
+      - '5432'
+    environment:
+      - POSTGRES_DB=retail_analytics
+      - POSTGRES_USER=lordik
+      - POSTGRES_PASSWORD=lordik
